@@ -2,13 +2,15 @@ package com.example.spdockpro.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Entity
 @Data
+@NoArgsConstructor
+@Entity
 @Table(name = "employees")
 public class EmployeeEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
     @Column(name = "name")
